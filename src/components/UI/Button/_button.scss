@@ -1,0 +1,16 @@
+.button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background-color: var(--color-white);
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Uphoria Endeavour", sans-serif;
+  line-height: 0.3;
+  min-height: 2rem;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 1vw;
+}
