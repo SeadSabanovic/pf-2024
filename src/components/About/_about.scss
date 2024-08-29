@@ -1,24 +1,25 @@
 .about {
   padding: 24px;
 
+  &__inner {
+    max-width: 700px;
+  }
+
   &__title {
     font-size: 4rem;
-    margin-bottom: 10svh;
+    margin-bottom: 3rem;
+    color: var(--color-white);
+    text-transform: uppercase;
   }
 
-  &__content {
+  &__section {
     display: block;
     font-size: 1.2rem;
-    max-width: 520px;
     text-transform: uppercase;
-    line-height: 1.7;
-  }
+    line-height: 1.2;
 
-  &__expand-img {
-    display: inline-block;
-    width: 20vw;
-    aspect-ratio: 16 / 9;
-    background: url("https://images.pexels.com/photos/1493659/pexels-photo-1493659.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
-    border-radius: 10vw;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
   }
 }

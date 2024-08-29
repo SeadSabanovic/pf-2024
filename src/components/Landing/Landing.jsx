@@ -1,5 +1,5 @@
 import "./_landing.scss";
-import Roses from "../../assets/img/roses.jpeg";
+import Roses from "../../assets/img/roses.webp";
 
 export default function Landing() {
   return (

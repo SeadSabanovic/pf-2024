@@ -7,29 +7,28 @@
 
   &__shape {
     position: absolute;
+    opacity: 0.2;
 
     &:nth-of-type(1) {
-      opacity: 0.2;
       top: 42%;
       left: 70%;
       width: 25rem;
       height: 25rem;
       background: #839788;
       border-radius: 24% 76% 77% 23% / 30% 30% 70% 70%;
-      filter: blur(6rem);
+      filter: blur(3rem);
       animation: shape1 40s infinite;
     }
 
     &:nth-of-type(2) {
-      opacity: 0.07;
       position: absolute;
       top: 33%;
       left: 40%;
       width: 35rem;
       height: 25rem;
-      background: var(--color-blue);
+      background: pink;
       border-radius: 73% 27% 77% 23% / 53% 4% 96% 47%;
-      filter: blur(12rem);
+      filter: blur(6rem);
       animation: shape2 35s infinite;
     }
   }
