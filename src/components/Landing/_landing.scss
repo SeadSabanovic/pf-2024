@@ -11,9 +11,20 @@
     height: 100%;
     padding: 24px;
     border: 1px solid rgba(#baa898, 0.2);
-    border-radius: 2vw;
+    border-radius: 1rem;
     backdrop-filter: blur(6rem);
     color: var(--color-white);
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100px;
+      backdrop-filter: blur(1rem);
+      z-index: -1;
+    }
   }
 
   &__bg {
@@ -42,5 +53,51 @@
 
   &__sub {
     font-size: 1.5rem;
+  }
+
+  &__cta-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    gap: 16px;
+    padding: 24px;
+
+    &__link {
+      display: block;
+      height: 45px;
+      padding: 0 0.8rem;
+      backdrop-filter: blur(6rem);
+      background-color: rgba(#fff, 0.1);
+      border: 1px solid rgba(#baa898, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      border-radius: 1rem;
+      text-decoration: none;
+
+      &:hover {
+        path {
+          fill: var(--color-white);
+        }
+      }
+
+      span {
+        color: var(--color-white);
+        font-family: "Uphoria Endeavour", sans-serif;
+        transform: translateY(2px);
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+
+        path {
+          transition: fill 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+          fill: var(--color-white-shade);
+        }
+      }
+    }
   }
 }

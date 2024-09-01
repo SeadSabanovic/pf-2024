@@ -1,7 +1,58 @@
 .skills {
-  padding: 24px;
-  border: 1px solid rgba(#baa898, 0.2);
-  border-radius: 2vw;
-  backdrop-filter: blur(6rem);
-  background-color: rgba(#baa898, 0.2);
+  background-color: #000;
+  pointer-events: none;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0px;
+  bottom: 0;
+  width: 60px;
+  overflow: hidden;
+  height: 100lvh;
+  display: flex;
+  justify-content: center;
+  border-right: 1px solid rgba(#baa898, 0.4);
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: fit-content;
+    transform: translate3d(0, var(--move-initial), 0);
+  }
+
+  &__container {
+    animation: loopText 50s infinite linear;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__skill {
+    position: relative;
+    font-family: "Uphoria Endeavour", sans-serif;
+    transform: translateX(-2px);
+    font-size: 2.7rem;
+    white-space: nowrap;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    display: flex;
+
+    .star {
+      display: block;
+      padding-top: 0.5rem;
+      color: #839788;
+      transform: translateX(-4px);
+    }
+  }
+}
+
+@keyframes loopText {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-100%);
+  }
 }

@@ -11,20 +11,11 @@ function App() {
       <Background />
       <div className="main-wrap">
         <Landing />
-        <Skills />
       </div>
+      <Skills />
       <Intro />
       <div className="main-wrap">
         <About />
-        {/* <div className="grid grid--3">
-          <Landing />
-          <Landing />
-          <Landing />
-        </div> */}
-        {/* <div className="grid grid--2">
-          <Landing />
-          <Landing />
-        </div> */}
       </div>
     </div>
   );

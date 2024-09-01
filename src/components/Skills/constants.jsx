@@ -1,0 +1,18 @@
+export const SKILLS = [
+  "HTML 5",
+  "CSS 3",
+  "SASS",
+  "Figma",
+  "JavaScript",
+  "Angular",
+  "RxJS",
+  "React",
+  "Redux",
+  "Gatsby",
+  "Vue",
+  "Nuxt",
+  "GSAP",
+  "Framer Motion",
+  "WordPress",
+  "PHP",
+];

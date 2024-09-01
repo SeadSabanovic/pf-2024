@@ -1,13 +1,14 @@
 .intro {
   position: relative;
-  padding: 50svh 24px;
-  overflow: hidden;
+  overflow-x: hidden;
 
   &__section {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    overflow: hidden;
+    padding: 50svh 24px;
 
     h3 {
       font-size: 20svh;
