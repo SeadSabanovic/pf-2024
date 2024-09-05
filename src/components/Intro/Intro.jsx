@@ -13,7 +13,7 @@ export default function Intro() {
     textSections.forEach((section, index) => {
       const w = textSections[index];
       const [x, xEnd] =
-        index % 2 === 0 // Even-indexed sections
+        index % 2 === 0
           ? [w.scrollWidth * -0.5, 0]
           : [w.scrollWidth * 0.5, section.offsetWidth * -0.5];
       gsap.fromTo(

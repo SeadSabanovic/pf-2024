@@ -1,6 +1,5 @@
 import "./_skills.scss";
 import { SKILLS } from "./constants";
-import gsap from "gsap";
 
 export default function Skills() {
   return (

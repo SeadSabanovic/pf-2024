@@ -7,18 +7,35 @@
   left: 0px;
   bottom: 0;
   width: 60px;
-  overflow: hidden;
   height: 100lvh;
   display: flex;
   justify-content: center;
   border-right: 1px solid rgba(#baa898, 0.4);
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50px;
+  }
+
+  &::before {
+    background-image: linear-gradient(180deg, #000, rgba(#000, 0));
+  }
+
+  &::after {
+    bottom: 0;
+    background-image: linear-gradient(360deg, #000, rgba(#000, 0));
+  }
 
   &__inner {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     height: fit-content;
-    transform: translate3d(0, var(--move-initial), 0);
   }
 
   &__container {
