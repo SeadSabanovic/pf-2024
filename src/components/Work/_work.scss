@@ -1,0 +1,66 @@
+.work {
+  overflow: hidden;
+  padding: 10svh 0;
+
+  &__title {
+    font-size: 4rem;
+    color: var(--color-white);
+    margin-bottom: 3rem;
+  }
+
+  &__intro-text {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+    max-width: 700px;
+  }
+
+  &__projects {
+    padding-top: 3rem;
+    position: relative;
+
+    &__wrap {
+      height: 100%;
+      display: flex;
+      gap: 1rem;
+      width: fit-content;
+    }
+
+    &__project {
+      border: 1px solid rgba(#baa898, 0.3);
+      $project: &;
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      &:nth-of-type(2) {
+        #{$project}__frame {
+          transform: rotate(2deg);
+        }
+      }
+
+      &__details {
+        max-width: 400px;
+        padding: 1rem;
+        border-bottom: 1px solid rgba(#baa898, 0.3);
+      }
+
+      &__name {
+        font-size: 2rem;
+        color: var(--color-white);
+        white-space: nowrap;
+      }
+
+      &__desc {
+        font-size: 1rem;
+        margin-top: 0.5rem;
+      }
+
+      &__body {
+        position: relative;
+        padding: 1rem;
+      }
+    }
+  }
+}

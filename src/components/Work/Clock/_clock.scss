@@ -1,0 +1,148 @@
+.clock {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  min-width: 350px;
+  aspect-ratio: 1;
+  border: 1px solid rgba(#baa898, 0.3);
+  border-radius: 50vw;
+  background-color: rgba(#000, 0.3);
+  backdrop-filter: blur(2rem);
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: -4px center;
+    opacity: 0.3;
+    animation: rotate 120s linear infinite;
+  }
+
+  &__face {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 10px;
+      height: 10px;
+      background-color: #baa898;
+      z-index: 5;
+      border-radius: 50vw;
+    }
+
+    &__hour {
+      position: absolute;
+      margin: auto;
+      left: 49%;
+      bottom: 50%;
+      background: rgba(#baa898, 0.5);
+      width: 3px;
+      height: 20%;
+      transform: rotate(0);
+      transform-origin: 50% 100%;
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
+      z-index: 2;
+    }
+
+    &__minute {
+      position: absolute;
+      margin: auto;
+      left: calc(50% - 1px);
+      bottom: 50%;
+      background: rgba(#baa898, 0.5);
+      width: 2px;
+      transform-origin: 50% 100%;
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
+      transform: rotate(0);
+      height: 30%;
+      z-index: 1;
+
+      &::after,
+      &::before {
+        position: absolute;
+        content: "";
+        top: 10px;
+        width: 10px;
+        height: 10px;
+        border: 2px solid rgba(#baa898, 0.5);
+        border-radius: 40% 5%;
+      }
+
+      &::after {
+        left: -12px;
+        border-radius: 5% 40%;
+      }
+    }
+
+    &__second {
+      position: absolute;
+      margin: auto;
+      left: 49%;
+      bottom: 50%;
+      background: rgba(pink, 0.5);
+      width: 1px;
+      transform-origin: 50% 100%;
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
+      left: 49.5%;
+      transform: rotate(0);
+      height: 35%;
+    }
+  }
+
+  &__number {
+    font-family: "Uphoria Endeavour", sans-serif;
+    position: absolute;
+    color: var(--color-white);
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+
+    &:nth-of-type(2) {
+      top: 10%;
+      left: 50%;
+    }
+
+    &:nth-of-type(3) {
+      top: 50%;
+      right: 2%;
+    }
+
+    &:nth-of-type(4) {
+      bottom: 2%;
+      left: 50%;
+    }
+
+    &:nth-of-type(5) {
+      top: 50%;
+      left: 8%;
+    }
+  }
+}

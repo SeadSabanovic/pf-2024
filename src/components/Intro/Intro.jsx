@@ -33,17 +33,12 @@ export default function Intro() {
     <div className="intro">
       <div className="intro__section">
         <h3 className="intro__section__text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          BMW DORMAKABA VODAFONE REDBULL SALEWA
         </h3>
         <h3 className="intro__section__text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          DORMAKABA VODAFONE REDBULL BMW SWISSQUOTE
         </h3>
-        <h3 className="intro__section__text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </h3>
-        <h3 className="intro__section__text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </h3>
+        <h3 className="intro__section__text">YUH VODAFONE REDBULL SALEWA</h3>
       </div>
       <img src={Statue} alt="" className="intro__statue" />
       <img src={Petals} alt="" className="intro__petals intro__petals--1" />

@@ -1,7 +1,6 @@
 .landing {
   position: relative;
   padding: 24px;
-  min-height: 100lvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,11 +9,27 @@
     color: var(--color-white);
     font-size: 5rem;
     text-align: center;
+    mix-blend-mode: difference;
   }
 
   &__sub {
     text-align: center;
     font-size: 1.2rem;
+  }
+
+  &__inner {
+    position: relative;
+    width: 100%;
+    min-height: 70svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(#baa898, 0.3);
+    border-top-left-radius: 60%;
+    border-top-right-radius: 90%;
+    border-bottom-right-radius: 60%;
+    border-bottom-left-radius: 90%;
   }
 
   &__frame {
@@ -27,49 +42,23 @@
     filter: blur(3rem);
   }
 
-  &__cta-container {
+  &__scroll {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: -100px;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid rgba(#baa898, 0.3);
+    transform: translateX(-50%);
     display: flex;
-    gap: 16px;
-    padding: 24px;
+    justify-content: center;
+    align-items: center;
 
-    &__link {
-      display: block;
-      height: 45px;
-      padding: 0 0.8rem;
-      backdrop-filter: blur(6rem);
-      background-color: rgba(#fff, 0.1);
-      border: 1px solid rgba(#baa898, 0.2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      border-radius: 1rem;
-      text-decoration: none;
-
-      &:hover {
-        path {
-          fill: var(--color-white);
-        }
-      }
-
-      span {
-        color: var(--color-white);
-        font-family: "Uphoria Endeavour", sans-serif;
-        transform: translateY(2px);
-      }
-
-      svg {
-        width: 24px;
-        height: 24px;
-
-        path {
-          transition: fill 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-          fill: var(--color-white-shade);
-        }
-      }
+    svg {
+      width: 150px;
+      height: 150px;
+      opacity: 0.4;
     }
   }
 }

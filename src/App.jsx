@@ -4,6 +4,7 @@ import Background from "./components/Background/Background";
 import Intro from "./components/Intro/Intro";
 import Landing from "./components/Landing/Landing";
 import Skills from "./components/Skills/Skills";
+import Work from "./components/Work/Work";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Landing />
       <Skills />
       <Intro />
+      <Work />
       <div className="main-wrap">
         <About />
       </div>
