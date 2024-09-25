@@ -9,22 +9,44 @@ export default function Work() {
   useLayoutEffect(() => {
     const section = document.querySelector(".work__projects");
     const wrap = document.querySelector(".work__projects__wrap");
-    console.log(section);
-    console.log(wrap);
+    const projects = document.querySelectorAll(".work__projects__project");
 
-    gsap.to(wrap, {
+    const vertical = gsap.to(wrap, {
       xPercent: -100,
-      x: 400,
+      x: section.getBoundingClientRect().width,
       scrollTrigger: {
         pin: wrap,
         anticipatePin: 1,
         start: "center center",
-        end: "+=2000",
+        end: `+=${wrap.getBoundingClientRect().width / 2}`,
         trigger: wrap,
         scrub: 1,
       },
     });
+
+    // Opacity animation for each project
+    projects.forEach((project) => {
+      gsap.fromTo(
+        project,
+        {
+          opacity: 0.2,
+          scale: 0.9,
+        },
+        {
+          scale: 1,
+          opacity: 1,
+          scrollTrigger: {
+            containerAnimation: vertical,
+            trigger: project,
+            start: "right right",
+            end: "+=2",
+            scrub: 1,
+          },
+        }
+      );
+    });
   }, []);
+
   return (
     <div className="work">
       <div className="work__inner main-wrap">

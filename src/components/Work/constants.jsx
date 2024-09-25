@@ -1,20 +1,20 @@
-import Frame1 from "../../assets/img/frame-work-1.png";
 import Clock from "./Clock/Clock";
+import Salewa from "./Salewa/Salewa";
 export const PROJECTS = [
-  {
-    name: "YUH",
-    desc: "WEBSITE",
-    // body: <Frame1 />,
-  },
   {
     name: "SOLEKTRA",
     desc: "WEB APP",
     body: <Clock />,
   },
   {
+    name: "YUH",
+    desc: "WEBSITE",
+    // body: <Frame1 />,
+  },
+  {
     name: "SALEWA",
     desc: "WEBSITE",
-    // body: Frame1,
+    body: <Salewa />,
   },
   {
     name: "BLACK MOOSE",
@@ -37,12 +37,12 @@ export const PROJECTS = [
     // body: Frame1,
   },
   {
-    name: "PREVIOUS PORTFOLIO",
+    name: "THIS PORTFOLIO",
     desc: "WEBSITE",
     // body: Frame1,
   },
   {
-    name: "OLDER PORTFOLIO",
+    name: "PREVIOUS PORTFOLIO",
     desc: "WEBSITE",
     // body: Frame1,
   },
