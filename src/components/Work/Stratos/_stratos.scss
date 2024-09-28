@@ -1,0 +1,58 @@
+.stratos {
+  position: relative;
+  height: 100%;
+  width: 400px;
+
+  svg {
+    z-index: 1;
+    position: absolute;
+    transform-origin: center;
+
+    &:nth-child(1) {
+      bottom: -14px;
+      left: -15px;
+      animation-delay: 0.2s;
+      animation: star 3s ease-in-out infinite;
+    }
+
+    &:nth-child(2) {
+      top: -15px;
+      left: -15px;
+      animation-delay: 1s;
+      animation: star 3s ease-in-out infinite;
+    }
+
+    @keyframes star {
+      0% {
+        opacity: 0.3;
+        transform: scale(0.3);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      100% {
+        opacity: 0.3;
+        transform: scale(0.3);
+      }
+    }
+  }
+
+  &__inner {
+    border: 1px solid rgba(#baa898, 0.3);
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 50vw;
+    border-bottom-right-radius: 50vw;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__gif {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+  }
+}

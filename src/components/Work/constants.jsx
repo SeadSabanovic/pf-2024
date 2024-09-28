@@ -1,6 +1,7 @@
 import BlackMoose from "./BM/BlackMoose";
 import Clock from "./Clock/Clock";
 import Salewa from "./Salewa/Salewa";
+import Stratos from "./Stratos/Stratos";
 import Yuh from "./Yuh/Yuh";
 export const PROJECTS = [
   {
@@ -27,7 +28,7 @@ export const PROJECTS = [
   {
     name: "STRATOS",
     desc: "WEBSITE",
-    // body: Frame1,
+    body: <Stratos />,
   },
   {
     name: "DOODLE ART",
