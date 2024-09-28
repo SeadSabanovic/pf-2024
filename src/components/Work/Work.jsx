@@ -30,7 +30,7 @@ export default function Work() {
         project,
         {
           opacity: 0.2,
-          scale: 0.9,
+          scale: 0.95,
         },
         {
           scale: 1,
@@ -38,7 +38,7 @@ export default function Work() {
           scrollTrigger: {
             containerAnimation: vertical,
             trigger: project,
-            start: "right right",
+            start: "right 110%",
             end: "+=2",
             scrub: 1,
           },
