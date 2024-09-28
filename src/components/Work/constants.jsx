@@ -1,5 +1,6 @@
 import BlackMoose from "./BM/BlackMoose";
 import Clock from "./Clock/Clock";
+import Doodle from "./Doodle/Doodle";
 import Salewa from "./Salewa/Salewa";
 import Stratos from "./Stratos/Stratos";
 import Yuh from "./Yuh/Yuh";
@@ -33,7 +34,7 @@ export const PROJECTS = [
   {
     name: "DOODLE ART",
     desc: "WEBSITE",
-    // body: Frame1,
+    body: <Doodle />,
   },
   {
     name: "CAMPUS CLUTCH",
