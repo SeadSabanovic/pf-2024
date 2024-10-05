@@ -18,7 +18,7 @@ export default function Work() {
         pin: wrap,
         anticipatePin: 1,
         start: "center center",
-        end: `+=${wrap.getBoundingClientRect().width / 2}`,
+        end: `+=${wrap.getBoundingClientRect().width}`,
         trigger: wrap,
         scrub: 1,
       },
@@ -60,6 +60,7 @@ export default function Work() {
           </p>
         </div>
         <div className="work__projects">
+          <h2 className="work__projects__title">WEBSITES</h2>
           <div className="work__projects__wrap">
             {PROJECTS.map((project, index) => {
               return (

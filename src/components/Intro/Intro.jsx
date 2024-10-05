@@ -10,6 +10,9 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Intro() {
   useLayoutEffect(() => {
     const textSections = gsap.utils.toArray(".intro__section__text");
+    const statue = document.querySelector(".intro__statue");
+    const petals = gsap.utils.toArray(".intro__petals");
+
     textSections.forEach((section, index) => {
       const w = textSections[index];
       const [x, xEnd] =
@@ -28,6 +31,34 @@ export default function Intro() {
         }
       );
     });
+
+    gsap.to(statue, {
+      top: "80%",
+      scrollTrigger: {
+        trigger: document.querySelector(".intro"),
+        scrub: 1,
+      },
+    });
+
+    gsap.to(petals[0], {
+      top: "30%",
+      rotate: -2,
+      scale: 0.9,
+      opacity: 0.7,
+      scrollTrigger: {
+        trigger: document.querySelector(".intro"),
+        scrub: 1,
+      },
+    });
+
+    gsap.to(petals[1], {
+      bottom: "20%",
+      opacity: 0.7,
+      scrollTrigger: {
+        trigger: document.querySelector(".intro"),
+        scrub: 1,
+      },
+    });
   }, []);
   return (
     <div className="intro">
@@ -41,8 +72,10 @@ export default function Intro() {
         <h3 className="intro__section__text">YUH VODAFONE REDBULL SALEWA</h3>
       </div>
       <img src={Statue} alt="" className="intro__statue" />
-      <img src={Petals} alt="" className="intro__petals intro__petals--1" />
-      <img src={Petals} alt="" className="intro__petals intro__petals--2" />
+      <div className="intro__petals-container">
+        <img src={Petals} alt="" className="intro__petals intro__petals--1" />
+        <img src={Petals} alt="" className="intro__petals intro__petals--2" />
+      </div>
     </div>
   );
 }

@@ -11,13 +11,11 @@ export default function Doodle() {
       pupils.forEach((pupil) => {
         const rect = pupil.getBoundingClientRect();
         // Calculate x relative to the center of the pupil
-        let x = (e.pageX - (rect.left + rect.width / 2)) / 30;
+        let x = (e.clientX - (rect.left + rect.width / 2)) / 100;
         // Calculate y using e.clientY relative to the center of the pupil
-        let y = (e.clientY - (rect.top + rect.height / 2)) / 30;
+        let y = (e.clientY - (rect.top + rect.height / 2)) / 100;
 
-        // Clamp the x value between -3 and 3
-        x = Math.max(-3, Math.min(2, x)) + "px";
-        // Clamp the y value between -2 and 2
+        x = Math.max(-2, Math.min(4, x)) + "px";
         y = Math.max(-1, Math.min(1, y)) + "px";
 
         gsap.to(pupil, {
