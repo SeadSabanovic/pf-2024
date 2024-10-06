@@ -1,5 +1,6 @@
 import BlackMoose from "./BM/BlackMoose";
 import Doodle from "./Doodle/Doodle";
+import Prev from "./Prev/Prev";
 import Salewa from "./Salewa/Salewa";
 import Stratos from "./Stratos/Stratos";
 import Yuh from "./Yuh/Yuh";
@@ -31,7 +32,7 @@ export const PROJECTS = [
   },
   {
     name: "PREVIOUS PORTFOLIO",
-    desc: "WEBSITE",
-    // body: Frame1,
+    desc: "Sead",
+    body: <Prev />,
   },
 ];
