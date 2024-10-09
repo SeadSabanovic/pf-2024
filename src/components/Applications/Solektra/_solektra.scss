@@ -1,0 +1,17 @@
+.solektra {
+  position: relative;
+
+  &__header {
+    min-height: 60svh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+
+    &__title {
+      font-size: 4rem;
+      color: var(--color-white);
+    }
+  }
+}

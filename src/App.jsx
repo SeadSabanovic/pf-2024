@@ -1,5 +1,6 @@
 import "./App.scss";
 import About from "./components/About/About";
+import Applications from "./components/Applications/Applications";
 import Background from "./components/Background/Background";
 import Intro from "./components/Intro/Intro";
 import Landing from "./components/Landing/Landing";
@@ -14,6 +15,7 @@ function App() {
       <Skills />
       <Intro />
       <Work />
+      <Applications />
       <div className="main-wrap">
         <About />
       </div>

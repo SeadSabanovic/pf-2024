@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import "./_clock.scss";
+import ClockBG from "../../../../assets/img/clock.jpg";
+
 export default function Clock() {
   useEffect(() => {
     const inc = 1000;
@@ -33,11 +35,7 @@ export default function Clock() {
 
   return (
     <div className="clock">
-      <img
-        src="https://prishtinainsight.com/wp-content/uploads/2023/11/circle.jpg"
-        alt=""
-        className="clock__bg"
-      />
+      <img src={ClockBG} alt="" className="clock__bg" />
       <div className="clock__face">
         <div className="clock__face__hour"></div>
         <div className="clock__face__minute"></div>
