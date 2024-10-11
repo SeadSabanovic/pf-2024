@@ -1,3 +1,5 @@
+import { ReactLenis } from "lenis/react";
+
 import "./App.scss";
 import About from "./components/About/About";
 import Applications from "./components/Applications/Applications";
@@ -9,17 +11,17 @@ import Work from "./components/Work/Work";
 
 function App() {
   return (
-    <div className="app">
-      <Background />
-      <Landing />
-      <Skills />
-      <Intro />
-      <Work />
-      <Applications />
-      <div className="main-wrap">
+    <ReactLenis root>
+      <div className="app">
+        <Background />
+        <Landing />
+        <Skills />
+        <Intro />
+        <Work />
+        <Applications />
         <About />
       </div>
-    </div>
+    </ReactLenis>
   );
 }
 

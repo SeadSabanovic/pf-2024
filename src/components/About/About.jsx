@@ -2,7 +2,7 @@ import "./_about.scss";
 
 export default function About() {
   return (
-    <div className="about">
+    <div className="about main-wrap">
       <div className="about__inner">
         <h2 className="about__title">STORY</h2>
         <div className="about__section">

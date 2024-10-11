@@ -12,6 +12,7 @@
   "dependencies": {
     "@fontsource/lato": "^5.0.22",
     "gsap": "^3.12.5",
+    "lenis": "^1.1.14",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "sass": "^1.77.8"
