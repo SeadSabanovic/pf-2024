@@ -8,10 +8,12 @@ import Intro from "./components/Intro/Intro";
 import Landing from "./components/Landing/Landing";
 import Skills from "./components/Skills/Skills";
 import Work from "./components/Work/Work";
+import Loader from "./components/Loader/Loader";
 
 function App() {
   return (
     <ReactLenis root>
+      <Loader />
       <div className="app">
         <Background />
         <Landing />

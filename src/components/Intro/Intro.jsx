@@ -1,13 +1,15 @@
 import "./_intro.scss";
 import Statue from "../../assets/img/statue.png";
 import Petals from "../../assets/img/petals.png";
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Intro() {
+  const petalsRef = useRef([]);
+
   useLayoutEffect(() => {
     const textSections = gsap.utils.toArray(".intro__section__text");
     const statue = document.querySelector(".intro__statue");
@@ -60,6 +62,33 @@ export default function Intro() {
       },
     });
   }, []);
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const { clientX, clientY } = e;
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+
+      petalsRef.current.forEach((petal, index) => {
+        const moveX = (clientX - centerX) / (index === 0 ? 60 : 15);
+        const moveY = (clientY - centerY) / (index === 0 ? 60 : 15);
+
+        gsap.to(petal, {
+          x: index === 0 ? moveX : -moveX,
+          y: moveY,
+          duration: 1,
+          ease: "power2.out",
+        });
+      });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
   return (
     <div className="intro">
       <div className="intro__section">
@@ -73,8 +102,18 @@ export default function Intro() {
       </div>
       <img src={Statue} alt="" className="intro__statue" />
       <div className="intro__petals-container">
-        <img src={Petals} alt="" className="intro__petals intro__petals--1" />
-        <img src={Petals} alt="" className="intro__petals intro__petals--2" />
+        <img
+          ref={(el) => (petalsRef.current[0] = el)}
+          src={Petals}
+          alt=""
+          className="intro__petals intro__petals--1"
+        />
+        <img
+          ref={(el) => (petalsRef.current[1] = el)}
+          src={Petals}
+          alt=""
+          className="intro__petals intro__petals--2"
+        />
       </div>
     </div>
   );

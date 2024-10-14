@@ -4,7 +4,7 @@ export default function About() {
   return (
     <div className="about main-wrap">
       <div className="about__inner">
-        <h2 className="about__title">STORY</h2>
+        <h2 className="about__title">OUTRO</h2>
         <div className="about__section">
           <p>
             Over four years ago, what started as a curiosity in the digital

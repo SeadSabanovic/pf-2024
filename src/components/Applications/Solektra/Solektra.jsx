@@ -19,6 +19,7 @@ export default function Solektra() {
     const text2 = text2Ref.current;
 
     gsap.to(header, {
+      filter: "grayscale(100%)",
       opacity: 0.1,
       y: 1300,
       rotate: -90,

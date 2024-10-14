@@ -36,18 +36,20 @@
 
   &__petals {
     position: absolute;
-    filter: sepia(60%);
     height: 40%;
 
     &--1 {
       left: 0%;
       top: 0%;
+      filter: sepia(60%);
     }
 
     &--2 {
       right: 0%;
       bottom: 10%;
       transform: rotate(180deg);
+      scale: 1.5;
+      filter: sepia(40%);
     }
   }
 }

@@ -9,11 +9,11 @@ export default function Yuh() {
       document.querySelector(".yuh"),
       {
         background:
-          "conic-gradient(from 0deg at 50% 50%, #ccb1da 0%, #71C4FFFF 100%)",
+          "conic-gradient(from 0deg at 50% 50%, #777 0%, #000 100%)",
       },
       {
         background:
-          "conic-gradient(from 360deg at 50% 50%, #ccb1da 0%, #71C4FFFF 100%)",
+          "conic-gradient(from 360deg at 50% 50%, #777 0%, #000 100%)",
         ease: "power1.out",
         duration: 10,
         repeat: -1,
