@@ -103,11 +103,6 @@ export default function Solektra() {
         />
       </div>
       <div className="solektra__content main-wrap">
-        <p>
-          Solektra, a Croatian company specializing in solar energy solutions,
-          focuses on designing and installing renewable energy systems and I
-          developed an app for them to track employee work hours.
-        </p>
         <div className="solektra__content__img-container">
           <img
             src="https://romanpagan.wordpress.com/wp-content/uploads/2016/01/apollocedini.jpg"
@@ -116,11 +111,14 @@ export default function Solektra() {
           />
         </div>
         <p>
-          The app for Solektra is role-based, with two key roles: worker and
-          accountant. Workers can only view and enter their own work hours,
-          while accountants have access to view and approve all employees'
-          hours. They also handle payroll, review analytics for three sister
-          companies, and manage payroll calculations.
+          The app for Solektra, a Croatian company specializing in solar energy
+          solutions - is role-based, with two key roles: worker and accountant.
+          <br />
+          <br />
+          Workers can only view and enter their own work hours, while
+          accountants have access to view and approve all employees' hours. They
+          also handle payroll, review analytics for three sister companies, and
+          manage payroll calculations.
         </p>
         <div className="solektra__content__img-container ml">
           <img
@@ -130,10 +128,11 @@ export default function Solektra() {
           />
         </div>
         <p>
-          The app is built using React, incorporating React Hook Form for form
-          handling and Framer for animations. The Context API manages the state,
-          and the entire UI was custom-designed for the client to ensure a
-          tailored and interactive experience.
+          The app is built using <span>React</span>, incorporating{" "}
+          <span>React Hook Form</span> for form handling and <span>Framer</span>{" "}
+          for animations. The <span>Context API</span> manages the state, and
+          the entire UI was custom-designed for the client to ensure a tailored
+          experience.
         </p>
       </div>
     </div>

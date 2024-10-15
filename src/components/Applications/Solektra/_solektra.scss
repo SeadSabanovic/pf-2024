@@ -69,6 +69,26 @@
       &:not(:last-child) {
         margin-bottom: 2rem;
       }
+
+      span {
+        &:nth-child(1) {
+          color: #58c4dc;
+        }
+
+        &:nth-child(2) {
+          color: #ec5990;
+        }
+
+        &:nth-child(3) {
+          background: linear-gradient(45deg, #ec5990, #58c4dc);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        &:nth-child(4) {
+          color: #58c4dc;
+        }
+      }
     }
   }
 }

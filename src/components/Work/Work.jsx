@@ -64,7 +64,13 @@ export default function Work() {
           <div className="work__projects__wrap">
             {PROJECTS.map((project, index) => {
               return (
-                <div className="work__projects__project" key={index}>
+                <a
+                  className="work__projects__project"
+                  key={index}
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <div className="work__projects__project__details">
                     <h3 className="work__projects__project__name">
                       {project.name}
@@ -76,7 +82,7 @@ export default function Work() {
                   <div className="work__projects__project__body">
                     {project.body && project.body}
                   </div>
-                </div>
+                </a>
               );
             })}
           </div>

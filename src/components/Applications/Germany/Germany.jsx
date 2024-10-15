@@ -68,10 +68,8 @@ export default function Germany() {
       <div className="main-wrap">
         <h3 className="germany__title">BMW</h3>
         <p className="germany__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-          suscipit iste nostrum repellat rerum molestias a nesciunt deleniti quo
-          debitis, ratione dolorem atque quis dolore tempore velit repellendus,
-          voluptate quod?
+          The following projects were developed using a combination of{" "}
+          <span>Angular</span> and <span>SharePoint</span>.
         </p>
         <div className="germany__projects" ref={projectsRef}>
           {PROJECTS.map((project, index) => (

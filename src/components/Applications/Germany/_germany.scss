@@ -7,15 +7,24 @@
   &__title {
     font-size: 4rem;
     text-align: end;
-    margin-bottom: 3rem;
     color: var(--color-white);
     text-transform: uppercase;
   }
 
   &__description {
-    max-width: 700px;
+    max-width: 400px;
     margin-left: auto;
     margin-bottom: 3rem;
+    text-align: end;
+
+    span {
+      &:nth-child(1) {
+        color: pink;
+      }
+      &:nth-child(2) {
+        color: #2bb4c2;
+      }
+    }
   }
 
   &__projects {
