@@ -21,8 +21,8 @@ export default function Loader() {
     });
 
     tl.to(dividerRef.current, { height: 0 })
-      .to(section1Ref.current, { width: 0 }, "-=50%") // Start 20% before previous ends
-      .to(section2Ref.current, { width: 0 }, "-=50%"); // Start 20% before previous ends
+      .to(section1Ref.current, { width: 0 }, "-=50%")
+      .to(section2Ref.current, { width: 0 }, "-=50%");
 
     // Optional: Return a cleanup function to kill the animation if the component unmounts
     return () => tl.kill();
