@@ -51,7 +51,7 @@ export default function Work() {
     <div className="work">
       <div className="work__inner main-wrap">
         <div className="work__intro">
-          <h2 className="work__title">WORK</h2>
+          <h2 className="work__title">Work</h2>
           <p className="work__intro-text">
             Please note that the portfolio displayed here represents only a
             portion of my work. Due to non-disclosure agreements with certain

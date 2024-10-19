@@ -7,9 +7,9 @@
 
   &__shape {
     position: absolute;
-    opacity: 0.2;
 
     &:nth-of-type(1) {
+      opacity: 0.2;
       top: 42%;
       left: 70%;
       width: 25rem;
@@ -21,6 +21,7 @@
     }
 
     &:nth-of-type(2) {
+      opacity: 0.2;
       position: absolute;
       top: 33%;
       left: 40%;
@@ -30,6 +31,19 @@
       border-radius: 73% 27% 77% 23% / 53% 4% 96% 47%;
       filter: blur(6rem);
       animation: shape2 35s infinite;
+    }
+
+    &:nth-of-type(3) {
+      opacity: 0.3;
+      position: fixed;
+      width: 40vw;
+      height: 32vw;
+      background: rgb(92, 67, 71);
+      border-radius: 50%;
+      filter: blur(6rem);
+      top: 0;
+      left: 0;
+      transform: translate(-50%, -50%);
     }
   }
 }

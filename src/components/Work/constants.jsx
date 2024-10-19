@@ -6,37 +6,37 @@ import Stratos from "./Stratos/Stratos";
 import Yuh from "./Yuh/Yuh";
 export const PROJECTS = [
   {
-    name: "STRATOS",
+    name: "Stratos",
     desc: "RED BULL",
     body: <Stratos />,
     link: "https://www.redbull.com/int-en/projects/red-bull-stratos",
   },
   {
-    name: "DOODLE ART",
+    name: "Doodle Art",
     desc: "RED BULL",
     body: <Doodle />,
     link: "https://www.redbull.com/int-en/event-series/red-bull-doodle-art",
   },
   {
-    name: "ORTLES",
+    name: "Ortles",
     desc: "SALEWA",
     body: <Salewa />,
     link: "https://ortles.salewa.com/",
   },
   {
-    name: "YUH",
+    name: "Yuh",
     desc: "SWISSQUOTE",
     body: <Yuh />,
     link: "https://www.yuh.com/en/",
   },
   {
-    name: "BLACK MOOSE",
+    name: "Black Moose",
     desc: "RED BULL",
     body: <BlackMoose />,
     link: "https://www.blackmooseoutposts.com/en/",
   },
   {
-    name: "PREVIOUS PORTFOLIO",
+    name: "Previous Portfolio",
     desc: "Sead",
     body: <Prev />,
     link: "https://sead-sabanovic.vercel.app/",

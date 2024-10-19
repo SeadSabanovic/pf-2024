@@ -3,20 +3,8 @@
 
   &__links {
     a {
+      text-decoration: none;
       color: var(--color-white);
-      text-decoration: underline;
-
-      &:nth-child(1) {
-        color: #0a66c2;
-      }
-
-      &:nth-child(2) {
-        color: #2dba4e;
-      }
-
-      &:nth-child(3) {
-        color: rgb(230, 230, 90);
-      }
     }
   }
 
@@ -28,7 +16,6 @@
     font-size: 4rem;
     margin-bottom: 3rem;
     color: var(--color-white);
-    text-transform: uppercase;
   }
 
   &__section {

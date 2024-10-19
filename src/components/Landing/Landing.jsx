@@ -18,9 +18,9 @@ export default function Landing() {
       <img src={Frame} alt="" className="landing__frame" />
       <div className="landing__inner">
         <h1 className="landing__title">
-          S&#x00C8;AD
+          Sead
           <br />
-          SABANOV&#x00CD;C
+          Sabanovic
         </h1>
         <p className="landing__sub">I DEVELOP FROM THE FRONT</p>
         <div className="landing__scroll">

@@ -4,7 +4,7 @@ export default function About() {
   return (
     <div className="about main-wrap">
       <div className="about__inner">
-        <h2 className="about__title">OUTRO</h2>
+        <h2 className="about__title">Outro</h2>
         <div className="about__section">
           <p>
             Over four years ago, what started as a curiosity in the digital
@@ -22,7 +22,7 @@ export default function About() {
             design and learn how to push the boundaries of web development even
             further by blending aesthetics with functionality.
           </p>
-          <p className="about__links">
+          <div className="about__links">
             <p>
               Feel free to reach out and connect with me on{" "}
               <a
@@ -43,7 +43,7 @@ export default function About() {
               , or send me an{" "}
               <a href="mailto:sead.sabanovic97@gmail.com">email</a>.
             </p>
-          </p>
+          </div>
         </div>
       </div>
     </div>

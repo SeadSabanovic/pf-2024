@@ -13,7 +13,7 @@ import Loader from "./components/Loader/Loader";
 function App() {
   return (
     <ReactLenis root>
-      <Loader />
+      {/* <Loader /> */}
       <div className="app">
         <Background />
         <Landing />
