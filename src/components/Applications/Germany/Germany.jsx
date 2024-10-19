@@ -29,10 +29,8 @@ export default function Germany() {
       });
 
       gsap.to(bgRef.current, {
-        yPercent: 10,
+        yPercent: 20,
         ease: "none",
-        scale: 1,
-        filter: "grayscale(0.5)",
         scrollTrigger: {
           trigger: ".germany",
           start: "top bottom",
@@ -44,7 +42,6 @@ export default function Germany() {
 
     initAnimation();
 
-    // Set up ResizeObserver to refresh ScrollTrigger on height changes
     const resizeObserver = new ResizeObserver(() => {
       ScrollTrigger.refresh();
     });
@@ -62,7 +59,7 @@ export default function Germany() {
         <img
           ref={bgRef}
           className="germany__image"
-          src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Peter_Paul_Rubens_-_Perseus_and_Andromeda_(detail)_-_WGA20305.jpg"
+          src="https://www.mayfairgallery.com/media/catalog/product/1/7/17357-large-pair-baroque-style-floral-still-life-oil-paintings-6-2000x.jpg"
         />
       </div>
       <div className="main-wrap">

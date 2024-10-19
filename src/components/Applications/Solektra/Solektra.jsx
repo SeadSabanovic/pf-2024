@@ -19,16 +19,15 @@ export default function Solektra() {
     const text2 = text2Ref.current;
 
     gsap.to(header, {
-      filter: "grayscale(100%)",
-      opacity: 0.1,
+      opacity: 0,
       y: 1300,
       rotate: -90,
-      scale: 0.8,
+      scale: 2,
       scrollTrigger: {
         trigger: header,
         start: "top 20%",
         end: "bottom+=1300 30%",
-        scrub: 3,
+        scrub: 2,
       },
     });
 
@@ -56,37 +55,6 @@ export default function Solektra() {
         },
       }
     );
-
-    // Image container animations
-    const imgContainers = document.querySelectorAll(
-      ".solektra__content__img-container"
-    );
-
-    // Animation for all image containers
-    imgContainers.forEach((container) => {
-      gsap.fromTo(
-        container,
-        {
-          height: 0,
-          y: 0,
-          width: "0%",
-          autoAlpha: 0.56,
-        },
-        {
-          autoAlpha: 1,
-          height: 200,
-          y: 50,
-          width: "70%",
-          ease: "power2.inOut",
-          scrollTrigger: {
-            trigger: container,
-            start: "top bottom",
-            end: "top+=300 center",
-            scrub: 1,
-          },
-        }
-      );
-    });
   }, []);
 
   return (
@@ -103,13 +71,6 @@ export default function Solektra() {
         />
       </div>
       <div className="solektra__content main-wrap">
-        <div className="solektra__content__img-container">
-          <img
-            src="https://romanpagan.wordpress.com/wp-content/uploads/2016/01/apollocedini.jpg"
-            alt="Solektra"
-            className="solektra__content__img"
-          />
-        </div>
         <p>
           The app for Solektra, a Croatian company specializing in solar energy
           solutions - is role-based, with two key roles: worker and accountant.
@@ -120,13 +81,7 @@ export default function Solektra() {
           also handle payroll, review analytics for three sister companies, and
           manage payroll calculations.
         </p>
-        <div className="solektra__content__img-container ml">
-          <img
-            src="https://media.meer.com/attachments/37974a81dd47d4b7afcfa0c7a3fbb19e3fe1f5da/store/fill/860/645/2307aed37890e359c738012b5353408ca03d3c6177af789abd425a534cbb/Salvador-Dali-The-Persistence-of-Memory.jpg"
-            alt="Solektra"
-            className="solektra__content__img"
-          />
-        </div>
+
         <p>
           The app is built using <span>React</span>, incorporating{" "}
           <span>React Hook Form</span> for form handling and <span>Framer</span>{" "}

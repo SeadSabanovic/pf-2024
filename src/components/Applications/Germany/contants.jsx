@@ -2,7 +2,7 @@ export const PROJECTS = [
   {
     title: "Global Orders",
     description:
-      "An application for efficiently ordering BMW parts, cars, and motorbikes, used by over 30,000 people worldwide. This global platform eases the ordering process for BMW dealerships, service centers, and authorized repair shops across multiple countries and time zones.",
+      "An application for ordering BMW parts, cars, and motorbikes, used by over 30,000 people worldwide. This global platform eases the ordering process for BMW dealerships, service centers, and authorized repair shops across multiple countries and time zones.",
   },
   {
     title: "LMS",

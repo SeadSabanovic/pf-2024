@@ -1,5 +1,6 @@
 .solektra {
   padding: 10svh 0 20svh;
+  overflow: hidden;
 
   &__header {
     z-index: -1;
@@ -63,7 +64,7 @@
     }
 
     p {
-      padding: 1rem;
+      padding: 2rem;
       backdrop-filter: blur(10px);
 
       &:not(:last-child) {
@@ -71,23 +72,7 @@
       }
 
       span {
-        &:nth-child(1) {
-          color: #58c4dc;
-        }
-
-        &:nth-child(2) {
-          color: #ec5990;
-        }
-
-        &:nth-child(3) {
-          background: linear-gradient(45deg, #ec5990, #58c4dc);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-
-        &:nth-child(4) {
-          color: #58c4dc;
-        }
+        color: var(--color-white);
       }
     }
   }

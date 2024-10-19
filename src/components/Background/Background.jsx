@@ -7,7 +7,6 @@ export default function Background() {
 
   useEffect(() => {
     const onMouseMove = (e) => {
-      console.log(e);
       gsap.to(thirdShapeRef.current, {
         duration: 1,
         x: e.clientX,
