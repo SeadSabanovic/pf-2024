@@ -10,6 +10,10 @@
     font-size: 5rem;
     text-align: center;
     mix-blend-mode: difference;
+
+    @media (max-width: 600px) {
+      font-size: 12vw;
+    }
   }
 
   &__sub {

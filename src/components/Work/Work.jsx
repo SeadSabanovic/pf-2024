@@ -23,28 +23,6 @@ export default function Work() {
         scrub: 1,
       },
     });
-
-    // Opacity animation for each project
-    projects.forEach((project) => {
-      gsap.fromTo(
-        project,
-        {
-          opacity: 0.2,
-          scale: 0.95,
-        },
-        {
-          scale: 1,
-          opacity: 1,
-          scrollTrigger: {
-            containerAnimation: vertical,
-            trigger: project,
-            start: "right 110%",
-            end: "+=2",
-            scrub: 1,
-          },
-        }
-      );
-    });
   }, []);
 
   return (

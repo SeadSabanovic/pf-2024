@@ -11,9 +11,8 @@ export default function Loader() {
   useEffect(() => {
     const tl = gsap.timeline({
       defaults: { duration: 0.8, ease: "power2.inOut" },
-      delay: 1, // Add a 1-second delay before the animation starts
+      delay: 1.5,
       onComplete: () => {
-        // Optional: Remove the loader from the DOM when animation is complete
         if (loaderRef.current) {
           loaderRef.current.remove();
         }
@@ -24,7 +23,6 @@ export default function Loader() {
       .to(section1Ref.current, { width: 0 }, "-=50%")
       .to(section2Ref.current, { width: 0 }, "-=50%");
 
-    // Optional: Return a cleanup function to kill the animation if the component unmounts
     return () => tl.kill();
   }, []);
 

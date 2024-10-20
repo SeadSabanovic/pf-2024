@@ -10,9 +10,9 @@ export default function About() {
   const imgRef = useRef(null);
   const sectionRef = useRef(null);
 
-  useEffect(() => {
-    const initAnimation = () => {
-      const scrollTrigger = ScrollTrigger.create({
+  const initAnimation = () => {
+    const defaultAnimation = () => {
+      return ScrollTrigger.create({
         trigger: sectionRef.current,
         start: "top bottom",
         end: "bottom center",
@@ -22,30 +22,37 @@ export default function About() {
           opacity: 0.6,
         }),
       });
-
-      // Swinging animation
-      gsap.to(imgRef.current, {
-        rotation: 2,
-        duration: 2,
-        repeat: -1,
-        yoyo: true,
-        ease: "power1.inOut",
-        transformOrigin: "top center",
-      });
-
-      return scrollTrigger;
     };
 
-    const scrollTrigger = initAnimation();
+    const mm = gsap.matchMedia();
 
-    // Set up ResizeObserver to refresh ScrollTrigger on height changes
+    mm.add("(min-width: 1100px)", () => {
+      return defaultAnimation();
+    });
+
+    return mm;
+  };
+
+  useEffect(() => {
+    const mm = initAnimation();
+
+    // Add swinging animation
+    const swingAnimation = gsap.to(imgRef.current, {
+      rotation: 2,
+      duration: 2,
+      ease: "sine.inOut",
+      repeat: -1,
+      yoyo: true,
+    });
+
     const resizeObserver = new ResizeObserver(() => {
-      scrollTrigger.refresh();
+      ScrollTrigger.refresh();
     });
     resizeObserver.observe(document.body);
 
     return () => {
-      scrollTrigger.kill();
+      mm.revert();
+      swingAnimation.kill();
       resizeObserver.disconnect();
     };
   }, []);

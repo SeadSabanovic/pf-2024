@@ -21,8 +21,8 @@ export default function Germany() {
           scale: 0.9,
           scrollTrigger: {
             trigger: project,
-            start: "center center",
-            end: "bottom 20%",
+            start: "center bottom",
+            end: "top center",
             scrub: true,
           },
         });

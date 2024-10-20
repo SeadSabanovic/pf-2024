@@ -15,7 +15,6 @@ export default function Landing() {
   }, []);
   return (
     <div className="landing">
-      <img src={Frame} alt="" className="landing__frame" />
       <div className="landing__inner">
         <h1 className="landing__title">
           Sead

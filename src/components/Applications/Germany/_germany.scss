@@ -34,6 +34,10 @@
     padding: 2rem;
     backdrop-filter: blur(3rem);
 
+    @media (max-width: 900px) {
+      padding: 1rem;
+    }
+
     &__title {
       font-size: 2rem;
       margin-bottom: 1rem;
@@ -50,8 +54,6 @@
     z-index: -1;
     opacity: 0.6;
     overflow: hidden;
-    
-    // Updated mask to create a fade-out effect only on top and bottom edges
     mask-image: linear-gradient(
       to bottom,
       transparent,
